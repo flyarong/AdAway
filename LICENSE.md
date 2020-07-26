@@ -21,10 +21,6 @@ If not, see <https://www.gnu.org/licenses/>.
   https://github.com/julian-klode/dns66  
   GPLv3
 
-* FlexboxLayout
-  https://github.com/google/flexbox-layout
-  Apache License v2
-
 * Guava  
   https://github.com/google/guava  
   Apache License v2
@@ -45,6 +41,10 @@ If not, see <https://www.gnu.org/licenses/>.
   https://github.com/cesanta/mongoose  
   GPLv2 License
 
+* Openssl    
+  https://www.openssl.org/    
+  [OpenSSL license](https://www.openssl.org/source/license-openssl-ssleay.txt)
+
 * OkHttp  
   https://github.com/square/okhttp  
   Apache License v2
@@ -62,15 +62,6 @@ If not, see <https://www.gnu.org/licenses/>.
   BSD 3-Clause License
 
 ## Images
-
-* status_enabled.svg, status_disabled.svg, status_update.svg  
-  Dropbox Emblems Tango by Charles A.  
-  https://forums.dropbox.com/topic.php?id=7818&replies=19  
-  Creative Commons Attribution 3.0 Unported License
-
-* status_fail.svg  
-  Faenza Icons  
-  GPLv3
 
 * icon.svg, banner.svg  
   AdAway by Dominik Schürmann  

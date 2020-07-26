@@ -21,7 +21,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.adaway.R;
 import org.adaway.helper.ThemeHelper;
 import org.adaway.ui.adblocking.ApplyConfigurationSnackbar;
-import org.adaway.ui.lists.type.ListsViewModel;
 
 import static android.content.Intent.ACTION_SEARCH;
 
@@ -99,8 +98,9 @@ public class ListsActivity extends AppCompatActivity {
                 case R.id.lists_navigation_redirected:
                     viewPager.setCurrentItem(2);
                     return true;
+                default:
+                    return false;
             }
-            return false;
         });
         // Display requested tab
         Intent intent = getIntent();
@@ -127,7 +127,7 @@ public class ListsActivity extends AppCompatActivity {
         ApplyConfigurationSnackbar applySnackbar = new ApplyConfigurationSnackbar(coordinatorLayout, false, false);
         // Bind snackbar to view models
         this.listsViewModel = new ViewModelProvider(this).get(ListsViewModel.class);
-        this.listsViewModel.getUserListItems().observe(this, applySnackbar.createObserver());
+        this.listsViewModel.getModelChanged().observe(this, applySnackbar.createObserver());
         // Get the intent, verify the action and get the query
         handleQuery(intent);
     }

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pref_dark_theme_key" translatable="false">darkTheme</string>
-    <bool name="pref_dark_theme_def">true</bool>
+    <string name="pref_dark_theme_mode_key" translatable="false">darkThemeMode</string>
+    <string name="pref_dark_theme_mode_def">MODE_NIGHT_YES</string>
+    <string-array name="pref_dark_theme_mode_entry_values" translatable="false">
+        <item>MODE_NIGHT_NO</item>
+        <item>MODE_NIGHT_YES</item>
+        <item>MODE_NIGHT_FOLLOW_SYSTEM</item>
+    </string-array>
     <string name="pref_update_check_key" translatable="false">updateCheck</string>
     <bool name="pref_update_check_def">true</bool>
     <string name="pref_never_reboot_key" translatable="false">neverReboot</string>
@@ -25,20 +30,15 @@
     <string name="pref_redirection_ipv6_key" translatable="false">redirectionIPv6</string>
     <string name="pref_redirection_ipv6_def" translatable="false">::1</string>
     <string name="pref_open_hosts_key" translatable="false">openHosts</string>
-    <string name="pref_apply_method_key" translatable="false">applyMethod</string>
-    <string-array name="pref_apply_method_entries_values" translatable="false">
-        <item>writeToSystem</item>
-        <item>writeToData</item>
-        <item>writeToDataData</item>
-        <item>customTarget</item>
-    </string-array>
     <string name="pref_apply_method_def" translatable="false">writeToSystem</string>
     <string name="pref_custom_target_key" translatable="false">customTarget</string>
     <string name="pref_custom_target_def" translatable="false">/data/etc/hosts</string>
     <string name="pref_webserver_enabled_key" translatable="false">webserverEnabled</string>
-    <bool name="pref_webserver_enabled_def">false</bool>
-    <string name="pref_webserver_on_boot_key" translatable="false">webserverOnBoot</string>
-    <bool name="pref_webserver_on_boot_def">false</bool>
+    <bool name="pref_webserver_enabled_def">true</bool>
+    <string name="pref_webserver_test_key" translatable="false">webserverTest</string>
+    <string name="pref_webserver_certificate_key" translatable="false">webserverCertificate</string>
+    <string name="pref_webserver_icon_key" translatable="false">webserverIcon</string>
+    <bool name="pref_webserver_icon_def">true</bool>
     <string name="pref_ad_block_method_key" translatable="false">adBlockMethod</string>
     <integer name="pref_ad_block_method_key_def">0</integer>
     <string name="pref_root_ad_block_method_key" translatable="false">rootAdBlockMethod</string>
@@ -65,5 +65,5 @@
         <item>all</item>
     </string-array>
     <string name="pref_vpn_excluded_user_apps_key" translatable="false">excludeUserAppFromVpn</string>
-    <string name="pref_vpn_excluded_user_apps_default" translatable="false"/>
+    <string name="pref_vpn_excluded_user_apps_default" translatable="false" />
 </resources>

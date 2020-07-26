@@ -1,14 +1,14 @@
 package org.adaway.db.entity;
 
+import android.webkit.URLUtil;
+
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
-import androidx.annotation.NonNull;
 
-import android.webkit.URLUtil;
-
-import java.util.Date;
+import java.time.ZonedDateTime;
 import java.util.Objects;
 
 /**
@@ -36,9 +36,9 @@ public class HostsSource {
     private String url;
     private boolean enabled;
     @ColumnInfo(name = "last_modified_local")
-    private Date lastLocalModification;
+    private ZonedDateTime localModificationDate;
     @ColumnInfo(name = "last_modified_online")
-    private Date lastOnlineModification;
+    private ZonedDateTime onlineModificationDate;
 
     /**
      * Check whether an URL is valid for as host source.<br>
@@ -76,20 +76,20 @@ public class HostsSource {
         this.enabled = enabled;
     }
 
-    public Date getLastLocalModification() {
-        return lastLocalModification;
+    public ZonedDateTime getLocalModificationDate() {
+        return localModificationDate;
     }
 
-    public void setLastLocalModification(Date lastLocalModification) {
-        this.lastLocalModification = lastLocalModification;
+    public void setLocalModificationDate(ZonedDateTime localModificationDate) {
+        this.localModificationDate = localModificationDate;
     }
 
-    public Date getLastOnlineModification() {
-        return lastOnlineModification;
+    public ZonedDateTime getOnlineModificationDate() {
+        return onlineModificationDate;
     }
 
-    public void setLastOnlineModification(Date lastOnlineModification) {
-        this.lastOnlineModification = lastOnlineModification;
+    public void setOnlineModificationDate(ZonedDateTime lastOnlineModification) {
+        this.onlineModificationDate = lastOnlineModification;
     }
 
     @Override
@@ -102,9 +102,9 @@ public class HostsSource {
         if (id != that.id) return false;
         if (enabled != that.enabled) return false;
         if (!url.equals(that.url)) return false;
-        if (!Objects.equals(lastLocalModification, that.lastLocalModification))
+        if (!Objects.equals(localModificationDate, that.localModificationDate))
             return false;
-        return Objects.equals(lastOnlineModification, that.lastOnlineModification);
+        return Objects.equals(onlineModificationDate, that.onlineModificationDate);
 
     }
 
@@ -113,8 +113,8 @@ public class HostsSource {
         int result = id;
         result = 31 * result + url.hashCode();
         result = 31 * result + (enabled ? 1 : 0);
-        result = 31 * result + (lastLocalModification != null ? lastLocalModification.hashCode() : 0);
-        result = 31 * result + (lastOnlineModification != null ? lastOnlineModification.hashCode() : 0);
+        result = 31 * result + (localModificationDate != null ? localModificationDate.hashCode() : 0);
+        result = 31 * result + (onlineModificationDate != null ? onlineModificationDate.hashCode() : 0);
         return result;
     }
 }

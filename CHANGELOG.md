@@ -1,3 +1,89 @@
+## [5.0.6] - Unreleased
+
+*This version is a pre-release*
+
+- Update target SDK to Android 11
+
+## [5.0.5] - 2020-06-28
+
+*This version is a pre-release*
+
+- Improve hosts source server handling with future time
+- Improve hosts update by skipping already up-to-date sources
+- Fix hosts source disable action
+- Fix hosts list apply notification from non-user changes 
+- Fix user excluded application settings
+- Remove navigation bar color customization
+- Update AndroidX dependencies and NDK version
+
+Special thanks to CobalTitan, ipdev, zgfg and sunmybun their bug reports.
+
+## [4.3.5] - 2020-06-27
+
+- Fix project Fastlane description for F-Droid store
+
+Special thanks to linsui and IzzySoft for their bug reports and Vankog for translations.
+
+## [5.0.4] - 2020-05-24
+
+*This version is a pre-release*
+
+- Improve overall host list computation
+- Add host redirected feature in VPN ad blocking
+- Remove WRITE_EXTERNAL_STORAGE permission (use Storage Access Framework instead)
+- Fix duplicate entries in generated hosts file
+- Fix allowed hosts settings in VPN ad blocking
+- Fix backup not exported as sdcard not writable
+- Fix source update period task preference
+- Fix host list paging
+
+Special thanks to holysnipz, ipdev99, QingKongBaiYu, and zgfg for their bug reports.
+
+## [5.0.3] - 2020-05-10
+
+*This version is a pre-release*
+
+- Add TLS support for web server
+- Add web server status in preferences
+- Add option to install self signed certificate
+- Add option to display app icon instead of blank page
+- Add full timezone support for source date
+- Add workaround for negative source update time when server time is not accurate
+- Add follow system dark theme mode
+- Fix user host list lost on source update
+- Fix import failed toast
+- Fix web server not start on install
+- Fix duplicate host entry on backup import
+- Update mongoose server
+- Update translations
+
+Special thanks to saltylemondrops, zgfg, ipdev99 and mickrussom for their bug reports.
+
+## [5.0.2] - 2020-04-25
+
+*This version is a pre-release*
+
+- Fix timezone issues with source modification date
+- Fix domain not removed when sources are disabled
+- Fix inverted host and ip while generating hosts file
+- Fix periodical hosts update check initialization 
+- Improve overall search feature in list UI
+- Improve last online modification date after retrieval
+- Fix install snackbar not hiding
+- Fix potential deadlock in VPN
+- Add missing text on successful VPN update
+- Update translations
+
+Special thanks to damoasda for its contribution, Vankog for all translations he merged and Ps24u and dhacke for theirs bug reports.
+
+## [4.3.4] - 2020-04-25
+
+- Fix crash in tcpdump log view on Lollipop
+- Fix timezone issues with source modification date
+- Fix NDK version
+
+Special thanks to Ps24u and Indranil012 for their bug reports.
+
 ## [5.0.1] - 2020-04-15
 
 *This version is a pre-release*

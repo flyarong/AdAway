@@ -6,5 +6,8 @@
     <string name="pref_update_check_app_daily">Verificare periodică</string>
     <!-- Application hosts -->
     <string name="pref_update_hosts_category">Actualizări fișier hosts</string>
+    <string name="pref_update_check">Verificare actualizări la pornire</string>
     <string name="pref_update_check_hosts_daily">Verificare periodică</string>
-    </resources>
+    <string name="pref_update_sync_on_update">Sincronizare automată la actualizare</string>
+    <string name="pref_update_sync_unmetered_only">Sincronizare automată doar pe conexiuni necontorizate</string>
+</resources>

@@ -3,10 +3,7 @@ package org.adaway.model.git;
 import androidx.annotation.Nullable;
 
 import java.net.MalformedURLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import static java.util.Locale.US;
+import java.time.ZonedDateTime;
 
 /**
  * This class is an utility class to get information from Git hosted hosts sources.
@@ -26,15 +23,6 @@ public abstract class GitHostsSource {
      * The GitLab URL.
      */
     private static final String GITLAB_URL = "https://gitlab.com/";
-    /**
-     * The date format to parse date from API.
-     */
-    protected SimpleDateFormat dateFormat;
-
-    GitHostsSource() {
-        // Define commit date format
-        this.dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", US);
-    }
 
     /**
      * Check if a hosts file url is hosted on Git hosting.
@@ -73,5 +61,5 @@ public abstract class GitHostsSource {
      * @return The last update date, {@code null} if the date could not be retrieved.
      */
     @Nullable
-    public abstract Date getLastUpdate();
+    public abstract ZonedDateTime getLastUpdate();
 }
